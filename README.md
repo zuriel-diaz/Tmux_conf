@@ -1,27 +1,45 @@
-Tmux is a terminal multiplexer. Tested with tmux 1.5 and 1.6.
+[Tmux](http:////tmux.sourceforge.net/) is a terminal multiplexer.
 
-1.Download:
+- Tested with tmux 1.5+.
+- Prefix mapped to Ctrl-A for `screen` users.
 
-git clone https://github.com/xthr3mx/Tmux_conf.git ~/tmux
+## Steps
 
-2.Copy tmux config to home
+1. Download:
 
-ln -s ~/tmux/tmux.conf ~/.tmux.conf
+``` bash 
+git clone --recursive https://github.com/xthr3mx/Tmux_conf.git ~/.tmux
+```
 
-Enjoy!
+2. Generate simlynk from tmux config folder.
 
-Start tmux
+``` bash
+ln -s ~/.tmux/tmux.conf ~/.tmux.conf
+```
+## Start tmux 
 
-To start a session:
+1. Update config:
 
-tmux
+``` bash
+tmux source-file ~/.tmux.conf
+```
 
-To reattach a previous session:
+2. Start:
 
-tmux attach
+``` bash
+tmux new -s session-name
+```
+And press `Control + a` then `d` to go back to the terminal.
 
-To reload config file
+To rettach a previous session: 
 
-<Control + b>: (which could Ctrl-B or Ctrl-A if you overidden it) then source-file ~/.tmux.conf
+``` bash
+tmux attach -t session-name
+```
+To reload config file (inside tmux session)
 
+``` bash
+<Control + a>: (which could Ctrl-q or Ctrl-f if you overidden it) then source-file ~/.tmux.conf
+```
 
+Done!
