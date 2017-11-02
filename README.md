@@ -8,7 +8,7 @@
 1. Download:
 
 ``` bash 
-git clone --recursive https://github.com/xthr3mx/Tmux_conf.git ~/.tmux
+git clone --recursive git@github.com:zuriel-diaz/Tmux_conf.git ~/.tmux
 ```
 
 2. Generate simlynk from tmux config folder.
